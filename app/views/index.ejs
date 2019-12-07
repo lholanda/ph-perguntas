@@ -1,0 +1,57 @@
+<%- include ('partials/header.ejs') %>
+<body>
+   <%- include ('partials/navbar.ejs') %>
+   <div class="container">
+      <hr>
+      <h1>Perguntas</h1>
+      <hr>
+      <a href="/perguntar" class="btn btn-primary">Perguntar</a>
+      <hr>
+      <% perguntas.forEach( pergunta => { %>
+         <div class="card">
+            <div class="card-body">
+              <%= pergunta.titulo %>
+            </div>
+            <div class="card-footer">
+               <button class="btn btn-primary">Responder</button>
+            </div>
+         </div>
+      <% }) %>
+   </div>
+</body>
+<%- include ('partials/footer.ejs') %>
+
+
+
+
+
+
+
+<!-- <a class="btn btn-success" href="/perguntar/">Perguntar</a> -->
+
+<%#= "teste "+perguntas.length %>
+<%# a = perguntas.length %>
+<%#= a %>
+
+<!-- outras formas  -->
+
+<%# for( var i = 0; i< perguntas.length ; i++ ) {%>
+   <%#= perguntas[i].id %> <%#= perguntas[i].titulo %> <%#= perguntas[i].descricao %>
+   <!-- <br> -->
+<%# } %>
+
+
+<%# perguntas.map( (pergunta) => { %>
+   <%#= pergunta.titulo %>  <%#= pergunta.descricao %>
+   <!-- <br> --> 
+<%#})%>
+
+<%# produtos.forEach( function (produto){ %>
+   <%#= produto.nome %>
+   <%#= produto.preco %>
+<%#})%>
+
+<%# for(chave in perguntas) {%>
+   <%#= perguntas[chave].titulo %> <%#= perguntas[chave].descricao %>
+   <!-- <br> -->
+ <%# } %>
